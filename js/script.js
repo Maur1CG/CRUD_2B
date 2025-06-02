@@ -25,10 +25,10 @@ function CrearTabla(datos){//"Datos" respresenta al JSON que viene de la api
         tabla.innerHTML += `
         <tr>
             <td>${persona.id}</td>
-            <td>${persona.Nombre}</td>
-            <td>${persona.Apellido}</td>
-            <td>${persona.Edad}</td>
-            <td>${persona.Correo}</td>
+            <td>${persona.nombre}</td>
+            <td>${persona.apellido}</td>
+            <td>${persona.edad}</td>
+            <td>${persona.correo}</td>
         <td> 
             <button>Editar</button>
             <button>Eliminar</button>
@@ -76,7 +76,7 @@ document.getElementById("frmAgregarIntegrante").addEventListener("submit", async
     const respuesta = await fetch(API_URL, {
         method: "POST" , 
         headers : {'Content-Type':'application/json'},
-        body: JSON.stringify({Nombre, Apellido, Edad, Correo})
+        body: JSON.stringify({nombre, apellido, edad, correo})
     });
 
     if(respuesta.ok){
