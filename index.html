@@ -27,7 +27,7 @@
     </header>
 
     <main class="container">
-        <h2>Integarntes Del Equipo</h2>
+        <h2>Integrantes Del Equipo</h2>
         
         
         <table id="tabla">
@@ -46,6 +46,24 @@
             </tbody>
         </table>
     </main>
+    <!---Modal para agregar registros-->
+
+    <dialog id="modalAgregar">
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCerrarModal"></a>
+                <h3>Agregar integrante</h3>
+            </header>
+            <form id="frmAgregarIntegrante">
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <input type="text" id="apellido" placeholder="Apellido" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="number" placeholder="Edad" id="edad" required>
+                <button type="submit" class="contrast">Guardar</button>
+            </form>
+        </article>
+    </dialog>
+
 
     <!---Boton flotante para agregar registros-->
     <button class="add-button" id="btnAbrirModal" title="Agregar Integrante">
