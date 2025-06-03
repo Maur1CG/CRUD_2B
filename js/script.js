@@ -31,7 +31,7 @@ function CrearTabla(datos){//"Datos" respresenta al JSON que viene de la api
             <td>${persona.correo}</td>
         <td> 
             <button>Editar</button>
-            <button>Eliminar</button>
+            <button onClick = "EliminarRegistro(${persona.id})">Eliminar</button>
         </td>
         </tr>
         `
@@ -97,4 +97,14 @@ document.getElementById("frmAgregarIntegrante").addEventListener("submit", async
     }
 
 });//Fin del formulario
+
+
+//Para eliminar registros
+async function EliminarRegistro(id){//Se pide id para borrar
+    if(confirm("¿Esta seguro de que desea eliminar el registro")){
+        await fetch(`${API_URL}/${id}`, {method: 'DELETE'});
+        ObtenerPersonas(); //Para obtener la vista actualizada (Refrescar)
+
+    }
+}
 
