@@ -66,6 +66,25 @@
         </article>
     </dialog>
 
+<!--Modal para editar-->
+
+<dialog id="modalEditar">
+    <article>
+        <header>
+            <a href="#" class="close" id="btnCerrarEditar"></a>
+            <h3>Editar integrante</h3>
+        </header>
+        <form id="frmEditarIntegrante">
+            <input type="hidden" id="Editar">
+            <input type="text" id="nombreEditar" placeholder="Nombre" required>
+            <input type="text" id="apellidoEditar" placeholder="Apellido" required>
+            <input type="email" id="emailEditar" placeholder="Correo Electronico" required>
+            <input type="number" placeholder="Edad" id="edadEditar" required> 
+            <button type="submit" class="contrast">Guardar</button>
+        </form>
+    </article>
+</dialog>
+
 
     <!---Boton flotante para agregar registros-->
     <button class="add-button" id="btnAbrirModal" title="Agregar Integrante">
